@@ -1,0 +1,20 @@
+task_0:
+  video_path: "../LivePortrait/animations/Profile--driver.mp4"
+  audio_path: "../outputs/tts/generated_audio_zh-CN-YunyangNeural.mp3"
+  bbox_shift: 0
+
+task_1:
+  video_path: "../LivePortrait/animations/Profile--driver.mp4"
+  audio_path: "../outputs/tts/generated_audio_ja-JP-KeitaNeural.mp3"
+  bbox_shift: 0
+
+task_2:
+  video_path: "../LivePortrait/animations/Profile--driver.mp4"
+  audio_path: "../outputs/tts/generated_audio_en-US-EricNeural.mp3"  
+  bbox_shift: 0
+
+
+task_3:
+  video_path: "../LivePortrait/animations/Profile--driver.mp4"
+  audio_path: "../outputs/tts/generated_audio_es-ES-AlvaroNeural.mp3"
+  bbox_shift: 0

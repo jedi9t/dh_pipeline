@@ -1,0 +1,4 @@
+# Ignore directories
+LivePortrait/
+MuseTalk/
+outputs/tts/

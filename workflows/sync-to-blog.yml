@@ -1,0 +1,51 @@
+name: Sync Readme to Blog
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'readme.md' # 仅在 Readme 修改时触发
+
+jobs:
+  sync-to-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+
+      - name: Process Markdown and Add Front-matter
+        run: |
+          # 1. 提取 README 内容并准备 Hugo 元数据
+          # 注意：请根据 Hugoplate 的具体目录（如 content/blog）调整路径
+          FILENAME="dh_pipeline.md"
+          
+          echo "---" > $FILENAME
+          echo "title: \"开源项目：dh_pipeline 数据流水线方案\"" >> $FILENAME
+          echo "date: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $FILENAME
+          echo "description: \"同步自 MOTA TECHLINK 开源项目 dh_pipeline 的最新技术白皮书。\"" >> $FILENAME
+          echo "categories: [\"开源项目\", \"技术白皮书\"]" >> $FILENAME
+          echo "tags: [\"Data Pipeline\", \"IoT\"]" >> $FILENAME
+          echo "image: \"/images/blog/project-default.jpg\"" >> $FILENAME # Hugoplate 通常需要封面图
+          echo "canonicalUrl: \"https://github.com/mota-techlink/dh_pipeline\"" >> $FILENAME
+          echo "---" >> $FILENAME
+          echo "" >> $FILENAME
+          
+          # 2. 追加 Readme 内容
+          cat readme.md >> $FILENAME
+          
+          # 3. 放入临时目录准备推送
+          mkdir -p sync_dir
+          mv $FILENAME sync_dir/
+
+      - name: Push to Website Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.SYNC_TO_BLOG_TOKEN }}
+        with:
+          source-directory: 'sync_dir'
+          destination-github-username: 'mota-techlink'
+          destination-repository-name: 'motaiot-site'
+          user-email: 'contact@motaiot.com'
+          target-branch: main
+          # 请确认 Hugoplate 的博客路径，通常是 content/blog 或 content/english/blog
+          target-directory: 'content/english/blog'

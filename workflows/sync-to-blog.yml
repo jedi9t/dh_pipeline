@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'readme.md' # 仅在 Readme 修改时触发
+  workflow_dispatch: # 允许在 Actions 页面手动点击运行
 
 jobs:
   sync-to-blog:
@@ -26,7 +27,7 @@ jobs:
           echo "categories: [\"开源项目\", \"技术白皮书\"]" >> $FILENAME
           echo "tags: [\"Data Pipeline\", \"IoT\"]" >> $FILENAME
           echo "image: \"/images/blog/project-default.jpg\"" >> $FILENAME # Hugoplate 通常需要封面图
-          echo "canonicalUrl: \"https://github.com/mota-techlink/dh_pipeline\"" >> $FILENAME
+          echo "canonicalUrl: \"https://github.com/mota-techlink/dh_pipeline"" >> $FILENAME
           echo "---" >> $FILENAME
           echo "" >> $FILENAME
           

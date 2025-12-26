@@ -5,7 +5,7 @@ import os
 from deep_translator import GoogleTranslator
 
 
-TEXT_FILE = "inputs/text.txt"
+TEXT_FILE = "assets/text/text.txt"
 OUTPUT_DIR = "outputs/tts"
 
 

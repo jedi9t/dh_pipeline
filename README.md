@@ -1,5 +1,7 @@
 # MOTA dh_pipeline: All-in-One Digital Human Video Pipeline
-
+<p align="center">
+  <img src="/assets/images/cover.jpg" alt="image">
+</p>
 A modular and high-efficiency pipeline designed to generate realistic digital human videos locally. It integrates LivePortrait for motion synchronization and MuseTalk for precise lip-sync, powered by MOTA TECHLINK's optimization logic.
 
 

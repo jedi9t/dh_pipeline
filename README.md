@@ -1,22 +1,21 @@
 # All-in-One Digital Human Video Pipeline
 <p align="center">
-  <img src="assets/images/cover.jpg" alt="MOTA dh_pipeline">
+  <img src="https://raw.githubusercontent.com/mota-techlink/dh_pipeline/refs/heads/main/assets/images/cover.jpg" alt="MOTA dh_pipeline">
 </p>
 
 A modular and high-efficiency pipeline designed to generate realistic digital human videos locally. It integrates LivePortrait for motion synchronization and MuseTalk for precise lip-sync, powered by MOTA TECHLINK's optimization logic.
 
 
 <div align="left">
-  <!-- Keep these links. Translations will automatically update with the README. -->
+  <!-- Keep these links. Translations will automatically update with the README. -->  
   <a href="https://zdoc.app/zh/mota-techlink/dh_pipeline">中文</a> | 
+  <a href="https://zdoc.app/es/mota-techlink/dh_pipeline">Español</a> |  
   <a href="https://zdoc.app/de/mota-techlink/dh_pipeline">Deutsch</a> | 
-  <a href="https://zdoc.app/es/mota-techlink/dh_pipeline">Español</a> | 
-  <a href="https://zdoc.app/fr/mota-techlink/dh_pipeline">Français</a> | 
-  <a href="https://zdoc.app/ja/mota-techlink/dh_pipeline">日本語</a> | 
-  <a href="https://zdoc.app/ko/mota-techlink/dh_pipeline">한국어</a> | 
-  <a href="https://zdoc.app/pt/mota-techlink/dh_pipeline">Português</a> | 
-  <a href="https://zdoc.app/ru/mota-techlink/dh_pipeline">Русский</a> | 
-  <a href="https://zdoc.app/en/mota-techlink/dh_pipeline">English</a>
+  <a href="https://zdoc.app/fr/mota-techlink/dh_pipeline">Français</a> |      
+  <a href="https://zdoc.app/pt/mota-techlink/dh_pipeline">Português</a> |   
+  <a href="https://zdoc.app/ru/mota-techlink/dh_pipeline">Русский</a> |   
+  <a href="https://zdoc.app/ko/mota-techlink/dh_pipeline">한국어</a> |   
+  <a href="https://zdoc.app/ja/mota-techlink/dh_pipeline">日本語</a> |     
 </div>
 
 <br/>
